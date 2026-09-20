@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <title>TabSaver — список</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">🗂️</span>
+        <h1>TabSaver</h1>
+      </div>
+
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Поиск по названию или ссылке…" />
+      </div>
+
+      <div class="sync">
+        <span id="sync-dot" class="dot" title="Статус синхронизации"></span>
+        <span id="sync-text" class="sync-text">Синхронизация не настроена</span>
+        <button id="sync-btn" class="btn"><span class="ic">💾</span> Синхронизировать</button>
+        <button id="load-btn" class="btn"><span class="ic">📂</span> Загрузить</button>
+        <button id="download-btn" class="btn" title="Скачать копию .json"><span class="ic">⬇</span> Копия</button>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <button id="add-group-btn" class="btn btn-primary"><span class="ic">＋</span> Группа</button>
+
+      <div class="view-toggle" role="group" aria-label="Режим отображения">
+        <button id="view-cards" class="seg" title="Карточки"><span class="ic">▦</span> Карточки</button>
+        <button id="view-list" class="seg" title="Список"><span class="ic">☰</span> Список</button>
+      </div>
+
+      <span id="count" class="count"></span>
+    </section>
+
+    <nav id="tags" class="tags" aria-label="Фильтр по группам"></nav>
+
+    <main id="board" class="board"></main>
+
+    <p id="empty" class="empty" hidden>
+      Пока ничего не сохранено. Откройте любую вкладку и нажмите на иконку
+      TabSaver → «Сохранить вкладку».
+    </p>
+
+    <script type="module" src="dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>TabSaver</title>
+  </head>
+  <body>
+    <header class="head">
+      <span class="logo">🗂️</span>
+      <h1>TabSaver</h1>
+    </header>
+
+    <label class="field">
+      <span>Группа</span>
+      <select id="group-select">
+        <option value="">Без группы</option>
+        <option value="__new__">➕ Новая группа…</option>
+      </select>
+    </label>
+
+    <div class="list-head">
+      <label class="selectall">
+        <input type="checkbox" id="select-all" />
+        <span>Открытые вкладки</span>
+      </label>
+      <span id="sel-count" class="sel-count">0 выбрано</span>
+    </div>
+    <p class="hint">Клик — выбрать. Shift+клик — выделить диапазон.</p>
+
+    <ul id="tab-list" class="tab-list"></ul>
+
+    <div class="actions">
+      <button id="save-btn" class="btn btn-primary">Сохранить выбранные</button>
+      <button id="save-close-btn" class="btn">Сохранить и закрыть</button>
+    </div>
+
+    <p id="status" class="status" hidden></p>
+
+    <footer class="foot">
+      <button id="open-dashboard" class="link">Открыть список →</button>
+    </footer>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "TabSaver",
+  "version": "0.1.0",
+  "description": "Сохраняйте вкладки в карточки с группами и превью. Экономьте память, держите порядок.",
+  "permissions": ["tabs", "storage", "activeTab", "scripting"],
+  "action": {
+    "default_title": "TabSaver — сохранить вкладку",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
